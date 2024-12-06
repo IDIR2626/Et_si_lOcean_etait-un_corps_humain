@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Océan et Corps Humain</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-4">
+    <h1>Océan et Corps Humain</h1>
+    <p>Découvrez les parallèles fascinants entre le corps humain et les mécanismes de l'océan.</p>
+  </header>
+  
+  <main class="container my-4">
+    <section id="interactive-model" class="text-center">
+      <h2>Modèle Interactif</h2>
+      <div id="model-container" class="d-flex justify-content-center my-4">
+        <button class="interactive-btn btn btn-info mx-2" data-info="coeur">
+          <img src="assets/images/coeur.png" alt="Cœur" class="img-fluid">
+          Cœur (Courants Marins)
+        </button>
+        <button class="interactive-btn btn btn-info mx-2" data-info="poumons">
+          <img src="assets/images/poumons.png" alt="Poumons" class="img-fluid">
+          Poumons (Échanges gazeux)
+        </button>
+        <button class="interactive-btn btn btn-info mx-2" data-info="peau">
+          <img src="assets/images/peau.png" alt="Peau" class="img-fluid">
+          Peau (Salinité et Température)
+        </button>
+      </div>
+      <p id="info-display" class="mt-4">Cliquez sur un élément pour en savoir plus.</p>
+    </section>
+    
+    <section id="podcasts" class="text-center my-4">
+      <h2>Podcasts</h2>
+      <audio controls autoplay class="mt-2">
+        <source src="assets/audio/sample.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas les fichiers audio.
+      </audio>
+    </section>
+  </main>
+  
+  <footer class="bg-dark text-white text-center py-3">
+    <p>Inspiré par La Nuit de l'Info 2024</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

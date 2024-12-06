@@ -1,0 +1,103 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
+  color: #333;
+}
+
+header {
+  background-color: #0077b6;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before, header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/wave.png') repeat;
+  opacity: 0.5;
+  animation: wave 10s linear infinite;
+}
+
+header::after {
+  top: auto;
+  bottom: 0;
+  opacity: 0.7;
+  animation-duration: 15s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+main {
+  padding: 1em;
+}
+
+#model-container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.interactive-btn {
+  padding: 1em;
+  background-color: #00b4d8;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px; /* Set a fixed width for the buttons */
+  transition: transform 0.3s;
+}
+
+.interactive-btn:hover {
+  background-color: #0077b6;
+  transform: scale(1.1);
+}
+
+#info-card {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-body {
+  backface-visibility: hidden;
+}
+
+#info-display {
+  text-align: center;
+  margin-top: 1em;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #023e8a;
+  color: white;
+}
